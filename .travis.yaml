@@ -1,0 +1,16 @@
+after_script:
+  - docker images
+
+before_script:
+  - IMAGE="ethereum:${VERSION/\//-}"
+
+env:
+  - VERSION=1.19.11
+
+language: bash
+
+script:
+  - docker build -t "$IMAGE" .
+  - docker run "$IMAGE" version | grep "Geth"
+
+services: docker
