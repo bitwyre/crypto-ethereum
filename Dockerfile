@@ -14,7 +14,7 @@ RUN cd yasm && \
 COPY openethereum openethereum
 WORKDIR /app/parity/openethereum
 ENV PATH /root/.cargo/bin:/usr/lib/llvm-10/bin:$PATH
-RUN RUSTFLAGS="-C link-args=-s -C codegen-units=1" cargo build --release --features final && \
+RUN cargo build --release --features final && \
     echo "\nBinary info:" && file target/release/parity && size target/release/parity
 
 
