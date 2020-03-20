@@ -8,7 +8,7 @@ COPY yasm yasm
 RUN cd yasm && \
     ./autogen.sh && \
     ./configure && \
-    make -j4 install
+    make -j$(nproc) install
 
 # Open-Ethereum
 COPY openethereum openethereum
