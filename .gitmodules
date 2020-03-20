@@ -1,3 +1,6 @@
-[submodule "go-ethereum"]
-	path = go-ethereum
-	url = https://github.com/ethereum/go-ethereum
+[submodule "openethereum"]
+	path = openethereum
+	url = https://github.com/openethereum/openethereum.git
+[submodule "yasm"]
+	path = yasm
+	url = https://github.com/yasm/yasm.git

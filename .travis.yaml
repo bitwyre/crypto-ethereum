@@ -5,12 +5,12 @@ before_script:
   - IMAGE="ethereum:${VERSION/\//-}"
 
 env:
-  - VERSION=1.19.11
+  - VERSION=2.7.2
 
 language: bash
 
 script:
   - docker build -t "$IMAGE" .
-  - docker run "$IMAGE" version | grep "Geth"
+  - docker run "$IMAGE" version | grep -i "parity"
 
 services: docker
