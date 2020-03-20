@@ -20,13 +20,24 @@ min_peers = 5
 cors = ["*"]
 # Allow connections only using specified addresses.
 hosts = ["*"]
+# Only selected APIs will be exposed over this interface.
+apis = [
+    "web3", "eth", "pubsub", "net", "parity", "private", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub",
+    "parity_transactions_pool", "personal", "parity_accounts", "secretstore"
+]
 # Threads for handling incoming connections for HTTP JSON-RPC server.
 server_threads = 2
 
 [websockets]
 # Only selected APIs will be exposed over this interface.
-apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "private", "traces", "rpc", "shh", "shh_pubsub", "parity_transactions_pool", "personal", "parity_accounts", "secretstore"]
+apis = [
+    "web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "private", "traces", "rpc", "shh", "shh_pubsub", 
+    "parity_transactions_pool", "personal", "parity_accounts", "secretstore"
+]
 
 [ipc]
 # Only selected APIs will be exposed over this interface.
-apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "parity_accounts", "private", "traces", "rpc", "shh", "shh_pubsub", "parity_transactions_pool", "personal", "secretstore"]
+apis = [
+    "web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "parity_accounts", "private", "traces", "rpc", "shh", 
+    "shh_pubsub", "parity_transactions_pool", "personal", "secretstore"
+]
